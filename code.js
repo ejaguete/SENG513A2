@@ -17,12 +17,13 @@ function getStats(txt) {
 
 // split words by " " and get rid of empty strings
 function splitwords(txt) {
-    return txt.split(/\s+/)
+    return txt.split(/\s+\t+/)
         .filter(function(i) {
             return i !== "";
         });
 }
 
+// get all unique words from txt
 function uniques(words) {
     let uniquewords = [];
     for(let i=0; i<words.length;i++) {
